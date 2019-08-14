@@ -12,8 +12,6 @@ const attendeeNames = [
     {"first": "Brian", "last": "Coursen"}
 ]
 
-routes(app);
-
 app.use(cors());
 
 app.get('/', (req, res)=> {
