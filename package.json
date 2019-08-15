@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "build": "babel -d ./build ./src",
+    "prebuild": "rm -rf build/*",
+    "start": "NODE_ENV=production node ./build/index.js",
+    "prestart": "npm build"
   },
   "author": "Kyle Benson",
   "license": "ISC",
