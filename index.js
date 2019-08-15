@@ -21,9 +21,9 @@ app.get('/', (req, res)=> {
     console.log("We have a new request")
     var connection = mysql.createConnection({
       host: process.env.DB_HOST,
-      user: DB_USER,
-      password: DB_PASS,
-      database: DB_DB
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_DB
     })
     connection.query('SELECT first_name, last_name FROM attendance WHERE attendee_type="Attendee"', function(err, rows, fields) {
     connection.end();
