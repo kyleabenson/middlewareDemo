@@ -25,7 +25,7 @@ app.get('/', (req, res)=> {
       password: process.env.DB_PASS,
       database: process.env.DB_DB
     })
-    connection.query('SELECT first_name, last_name FROM attendance WHERE attendee_type="Attendee"', function(err, rows, fields) {
+    connection.query('SELECT first, last FROM attendees WHERE type="Attendee"', function(err, rows, fields) {
     connection.end();
       if (!err) 
         return res.send(rows);
