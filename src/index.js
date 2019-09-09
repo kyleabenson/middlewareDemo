@@ -3,7 +3,8 @@ import express from 'express';
 const fetch = require('node-fetch');
 const PORT = 80;
 const cors = require('cors');
-const app = express().use("*",cors());
+// const app = express().use("*",cors());
+const app = express
 
 var mysql = require('mysql')
 
